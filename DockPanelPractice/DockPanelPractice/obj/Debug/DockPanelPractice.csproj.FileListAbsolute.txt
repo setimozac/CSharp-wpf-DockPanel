@@ -1,0 +1,17 @@
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\bin\Debug\DockPanelPractice.exe.config
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\bin\Debug\DockPanelPractice.exe
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\bin\Debug\DockPanelPractice.pdb
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.csprojAssemblyReference.cache
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\MainWindow.g.cs
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\App.g.cs
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice_MarkupCompile.cache
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice_MarkupCompile.lref
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\MainWindow.baml
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.g.resources
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.Properties.Resources.resources
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.csproj.GenerateResource.cache
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.csproj.CoreCompileInputs.cache
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.exe
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\DockPanelPractice.pdb
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\CarDialog.g.cs
+C:\Users\sizda\Desktop\programming\c#\assignments\DockPanel\CSharp-wpf-DockPanel\DockPanelPractice\DockPanelPractice\obj\Debug\CarDialog.baml

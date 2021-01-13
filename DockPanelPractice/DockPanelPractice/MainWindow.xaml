@@ -1,0 +1,41 @@
+﻿<Window x:Class="DockPanelPractice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DockPanelPractice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="Export To Csv"/>
+                    <Separator/>
+                    <MenuItem Header="Exit"/>
+                </MenuItem>
+                <MenuItem Header="Add">
+                    <MenuItem x:Name="AddCar" Click="AddCar_Click" Header="Add new car"/>
+                </MenuItem>
+                <MenuItem Header="Action">
+                    <MenuItem x:Name="MenuDelete" Click="MenuDelete_Click" Header="Delete"/>
+                    <MenuItem x:Name="MenuUpdate" Click="MenuItemUpdate_Click" Header="Update"/>
+                </MenuItem>
+            </Menu>
+
+            <StatusBar DockPanel.Dock="Bottom">
+                <TextBlock x:Name="tBoxStatusBar" Text="hi"/>
+            </StatusBar>
+
+            <ListView x:Name="gViewCar" DataContextChanged="gViewCar_DataContextChanged">
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Make Model" Width="200" DisplayMemberBinding="{Binding MakeModel}"/>
+                        <GridViewColumn Header="Engine Size" Width="100" DisplayMemberBinding="{Binding EngineSize}"/>
+                        <GridViewColumn Header="Fuel Type" Width="200" DisplayMemberBinding="{Binding Fuel}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</Window>
