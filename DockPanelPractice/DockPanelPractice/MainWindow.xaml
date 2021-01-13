@@ -28,15 +28,24 @@
                 <TextBlock x:Name="tBoxStatusBar" Text="hi"/>
             </StatusBar>
 
-            <ListView x:Name="gViewCar" DataContextChanged="gViewCar_DataContextChanged">
+            <ListView  x:Name="gViewCar" MouseDoubleClick="gViewCar_MouseDoubleClick" DataContextChanged="gViewCar_DataContextChanged">
                 <ListView.View>
                     <GridView >
-                        <GridViewColumn MenuItem.Click="{Binding ElementName=MenuDelete}" Header="Make Model" Width="200" DisplayMemberBinding="{Binding MakeModel}">
+
+                        <GridViewColumn  Header="Make Model" Width="200" DisplayMemberBinding="{Binding MakeModel}">
+
                         </GridViewColumn>
+
                         <GridViewColumn Header="Engine Size" Width="100" DisplayMemberBinding="{Binding EngineSize}"/>
                         <GridViewColumn Header="Fuel Type" Width="200" DisplayMemberBinding="{Binding Fuel}"/>
                     </GridView>
                 </ListView.View>
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Delete" Click="MenuDelete_Click"/>
+                        <MenuItem Header="Update" Click="MenuItemUpdate_Click"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
             </ListView>
         </DockPanel>
     </Grid>

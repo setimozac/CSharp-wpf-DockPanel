@@ -106,6 +106,7 @@ namespace DockPanelPractice
             {
                 Car car = (Car)gViewCar.SelectedItem;
                 CarDialog carDialog = new CarDialog("Update", car.MakeModel, car.EngineSize, car.Fuel);
+                carDialog.Owner = this;
                 carDialog.AssignResult += (make, size, fuel) => { car.MakeModel = make; car.EngineSize = size; car.Fuel = fuel ; RefreshContent(); };
                 carDialog.ShowDialog();
             }
@@ -118,6 +119,7 @@ namespace DockPanelPractice
         private void AddCar_Click(object sender, RoutedEventArgs e)
         {
             CarDialog carDialog = new CarDialog("Add", "", 1.8, "");
+            
             carDialog.AssignResult += (make, size, fuel) => { if( make != "") { Car newCar = new Car(make, size, fuel); cars.Add(newCar); }  };
             bool? result = carDialog.ShowDialog();
             if(result == true)
@@ -175,6 +177,11 @@ namespace DockPanelPractice
                 }
 
             }
+        }
+
+        private void gViewCar_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 

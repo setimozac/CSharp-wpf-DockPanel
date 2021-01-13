@@ -61,7 +61,7 @@ namespace DockPanelPractice
             size = sliderEngine.Value;
             fuel = comboFuel.SelectedItem.ToString();
             AssignResult?.Invoke(make, size, fuel);
-            DialogResult = true;
+            DialogResult = true; // close the current dialog 
         }
     }
 }
