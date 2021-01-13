@@ -17,8 +17,11 @@ namespace DockPanelPractice
     /// <summary>
     /// Interaction logic for CarDialog.xaml
     /// </summary>
+    /// 
+    
     public partial class CarDialog : Window
     {
+        public event Action<string, double, string> AssignResult;
         private string make;
         private double size;
         private string fuel;
@@ -50,6 +53,15 @@ namespace DockPanelPractice
                 fuel = fuelTypes[0];
             }
             
+        }
+
+        private void btnAction_Click(object sender, RoutedEventArgs e)
+        {
+            make = tBoxMake.Text;
+            size = sliderEngine.Value;
+            fuel = comboFuel.SelectedItem.ToString();
+            AssignResult?.Invoke(make, size, fuel);
+            DialogResult = true;
         }
     }
 }

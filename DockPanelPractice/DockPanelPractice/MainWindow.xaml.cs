@@ -102,18 +102,24 @@ namespace DockPanelPractice
             {
                 Car car = (Car)gViewCar.SelectedItem;
                 CarDialog carDialog = new CarDialog("Update", car.MakeModel, car.EngineSize, car.Fuel);
+                carDialog.AssignResult += (make, size, fuel) => { car.MakeModel = make; car.EngineSize = size; car.Fuel = fuel ; RefreshContent(); };
                 carDialog.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Please select a car to update!");
+                MessageBox.Show("Please select One car to update!");
             }
         }
 
         private void AddCar_Click(object sender, RoutedEventArgs e)
         {
             CarDialog carDialog = new CarDialog("Add", "", 1.8, "");
-            carDialog.ShowDialog();
+            carDialog.AssignResult += (make, size, fuel) => { if( make != "") { Car newCar = new Car(make, size, fuel); cars.Add(newCar); }  };
+            bool? result = carDialog.ShowDialog();
+            if(result == true)
+            {
+                RefreshContent();
+            }
         }
 
         private void MenuDelete_Click(object sender, RoutedEventArgs e)
@@ -122,7 +128,7 @@ namespace DockPanelPractice
             {
                 
                 var carsToDelete = gViewCar.SelectedItems;
-                MessageBoxResult result = MessageBox.Show($"Are You sure? \n {carsToDelete.Count} Item(s) about to Delete!", "Confirm", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show($"Are You sure? \n Deleting {carsToDelete.Count} Item(s) !", "Confirm", MessageBoxButton.YesNo);
                 if(result == MessageBoxResult.Yes)
                 {
                     foreach (Car car in carsToDelete)
