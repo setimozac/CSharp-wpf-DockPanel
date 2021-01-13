@@ -180,14 +180,4 @@ namespace DockPanelPractice
 
    
 }
-/*private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-{
-    using (StreamWriter writer = new StreamWriter(DATAFILE))
-    {
-        foreach (MyTask task in tasks)
-        {
-            writer.WriteLine(task.ToDataString());
-        }
 
-    }
-}*/
