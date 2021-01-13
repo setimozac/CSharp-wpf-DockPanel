@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DockPanelPractice"
         mc:Ignorable="d"
+        Closing="Window_Closing"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-                    <MenuItem Header="Export To Csv"/>
+                    <MenuItem x:Name="MenuCsvExport" Click="MenuCsvExport_Click" Header="Export To Csv"/>
                     <Separator/>
                     <MenuItem Header="Exit"/>
                 </MenuItem>

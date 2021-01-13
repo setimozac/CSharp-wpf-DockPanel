@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CsvHelper;
+using Microsoft.Win32;
 
 namespace DockPanelPractice
 {
@@ -69,6 +72,7 @@ namespace DockPanelPractice
 
         private void CreateObject(string[] line)
         {
+            if (line.Length != 3) return ;
             string model = line[0];
             string fuel = line[2];
             double size;
@@ -145,6 +149,32 @@ namespace DockPanelPractice
             }
             RefreshContent();
 
+        }
+
+        private void MenuCsvExport_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV (*.csv)|*.csv";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                using (var writer = new StreamWriter(saveFileDialog.FileName))
+                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                {
+                    csv.WriteRecords(cars);
+                }
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            using (StreamWriter writer = new StreamWriter(DATAPATH))
+            {
+                foreach (Car car in cars)
+                {
+                    writer.WriteLine(car.ToString());
+                }
+
+            }
         }
     }
 

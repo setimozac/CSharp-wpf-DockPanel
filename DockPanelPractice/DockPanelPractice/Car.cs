@@ -48,6 +48,18 @@
             EngineSize = size;
             Fuel = fuel;
         }
+
+        public string ToCsvString()
+        {
+            return $"{MakeModel},{EngineSize},{Fuel}";
+        }
+
+        public override string ToString()
+        {
+            return $"{MakeModel};{EngineSize};{Fuel}";
+        }
+
+
     }
 }
 
